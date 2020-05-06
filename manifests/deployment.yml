@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gbelikovkeycloakcontainers 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gbelikovkeycloakcontainers 
+    spec:
+      containers:
+        - name: gbelikovkeycloakcontainers 
+          image: kubernetesclusterregistrytest.azurecr.io/gbelikovkeycloakcontainers
+          ports:
+          - containerPort: 80
